@@ -24,6 +24,7 @@ async function sendTransaction() {
         if (!ethers.isAddress(TARGET_ADDRESS)) {
           console.error('Dirección inválida.');
           rl.close();
+          
           return;
         }
 
@@ -31,7 +32,7 @@ async function sendTransaction() {
     //tx es un objeto con los datos de la transaccion
   const tx = {
     to: TARGET_ADDRESS, // Dirección de destino a especificar
-    value: ethers.parseEther('0.1'), // Cantidad a enviar en ETH
+    value: ethers.parseEther('0.0001'), // Cantidad a enviar en ETH
     gasLimit: 21000,
     // gasPrice: opcional, puedes dejar que el proveedor determine el precio adecuado
   };
